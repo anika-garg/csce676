@@ -5,7 +5,9 @@ This project explores the MIND (Microsoft News Dataset) to analyze user news con
 ## Dataset
 
 Dataset: MIND (Microsoft News Dataset)
+
 Source: ACM RecSys paper – “MIND: A Large-scale Dataset for News Recommendation”
+
 Website: https://msnews.github.io/
 
 ### Files Used:
