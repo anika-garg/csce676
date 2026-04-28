@@ -79,8 +79,8 @@ This project was built in **Google Colab** with **Python 3.12**.
 ### Option 2: Run the preprocessing script standalone
 
 ```bash
-git clone https://github.com/<your-github-username>/news-shape.git
-cd news-shape
+git clone https://github.com/anika-garg/csce676.git
+cd csce676
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 python src/preprocess.py --output data/news_clean.parquet
@@ -132,7 +132,6 @@ news-shape/
 │   └── preprocess.py          ← reusable preprocessing pipeline
 ├── data/
 │   └── README.md              ← MIND data is auto-downloaded; no manual setup
-├── assets/                    ← exported figures from the notebook
 └── .gitignore
 ```
 
