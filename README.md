@@ -6,7 +6,7 @@ A data-mining project on the news articles that don't fit their category — wha
 
 **👉 Start here: [`main_notebook.ipynb`](./main_notebook.ipynb)**
 
-🎥 **Project video:** [add link here]
+🎥 **Project video:** https://www.youtube.com/watch?v=6mISUyifGsA
 
 *Anika Garg • Data Mining & Analysis Final Project*
 
