@@ -1,14 +1,14 @@
 # 📰 The Shape of News
 
-A data-mining project on the news articles that don't fit their category — what they look like, where they sit, and what they have in common.
+A data-mining project on the news articles that don't fit their category. 
 
-> Every news article lives inside a shape: a category, a topic cluster, a neighborhood of similar articles. Most articles sit comfortably in their shape. But about 5% don't fit anywhere cleanly. This project is about those articles.
+> Every news article lives inside a shape: a category, a topic cluster, a neighborhood of similar articles. Most articles sit comfortably in their shape. But about 5% don't fit anywhere cleanly. I examine what they look like, where they sit, and what they have in common.
 
 **👉 Start here: [`main_notebook.ipynb`](./main_notebook.ipynb)**
 
-🎥 **Project video:** [add link here]
+🎥 **Project video:** https://www.youtube.com/watch?v=6mISUyifGsA
 
-*Anika Garg • Data Mining & Analysis Final Project*
+*Anika Garg*
 
 ---
 
@@ -20,11 +20,9 @@ But if you skim any news feed for a few minutes, you'll find articles that don't
 
 I tested three standard hypotheses from the literature against each other on real news data:
 
-1. **Miscategorized** — the editor put the article in the wrong bucket.
-2. **Crossover** — the article genuinely spans two topics.
-3. **Rare but correct** — the article is unusual but in the right category.
-
-The data ended up pointing somewhere I didn't expect.
+1. **Miscategorized**: the editor put the article in the wrong bucket.
+2. **Crossover**: the article genuinely spans two topics.
+3. **Rare but correct**: the article is unusual but in the right category.
 
 ---
 
@@ -51,7 +49,7 @@ The data ended up pointing somewhere I didn't expect.
 
 - **Dataset:** [MIND (Microsoft News Dataset)](https://msnews.github.io/) — large training split, 101,527 raw articles, 18 editorial categories.
 - **After preprocessing:** 97,313 articles, 15 categories (3 tiny categories with <100 articles were dropped as clustering noise).
-- **Source:** auto-downloaded from `https://huggingface.co/datasets/yjw1029/MIND`. No manual data setup required — the notebook and `src/preprocess.py` handle the download.
+- **Source:** auto-downloaded from `https://huggingface.co/datasets/yjw1029/MIND`. No manual data setup required, since the notebook and `src/preprocess.py` handle the download.
 - **Citation:** Wu, F., Qiao, Y., Chen, J.-H., Wu, C., Qi, T., Lian, J., Liu, D., Xie, X., Gao, J., Wu, W., & Zhou, M. (2020). *MIND: A Large-scale Dataset for News Recommendation*. ACL.
 
 ### Preprocessing pipeline (in order)
@@ -63,7 +61,7 @@ The data ended up pointing somewhere I didn't expect.
 5. Drop exact duplicates on title+abstract; then drop near-duplicates with normalized titles (catches wire-service republishes).
 6. Convert categories to pandas categorical dtype.
 
-The full pipeline is implemented inline in the notebook AND as a reusable script at [`src/preprocess.py`](./src/preprocess.py).
+The full pipeline is implemented inline in the notebook and as a reusable script at [`src/preprocess.py`](./src/preprocess.py).
 
 ---
 
@@ -76,7 +74,7 @@ This project was built in **Google Colab** with **Python 3.12**.
 1. Open [`main_notebook.ipynb`](./main_notebook.ipynb) in Colab.
 2. Run the install cell at the top — it pins `numpy==1.26.4` and `pandas==2.2.2` so the rest of the stack (`gensim`, `node2vec`, `faiss-cpu`, `spacy`) stays compatible.
 3. Restart the Colab session once after the first install.
-4. Run all cells top-to-bottom. The MIND dataset auto-downloads. Total runtime is ~10–15 minutes (lemmatization is the slow step at ~3 minutes).
+4. Run all cells top-to-bottom. The MIND dataset auto-downloads. Total runtime is ~10–15 minutes.
 
 ### Option 2: Run the preprocessing script standalone
 
@@ -92,9 +90,9 @@ This downloads MIND, runs the full cleaning pipeline, and saves a parquet file y
 
 ### Order to read
 
-1. `main_notebook.ipynb` — the full project, top to bottom
-2. `checkpoints/checkpoint_1.ipynb` — early exploration
-3. `checkpoints/checkpoint_2.ipynb` — midpoint progress
+1. `main_notebook.ipynb`: the full project, top to bottom
+2. `checkpoints/checkpoint_1.ipynb`: checkpoint 1, which contains early dataset exploration
+3. `checkpoints/checkpoint_2.ipynb`: checkpoint 2, which contains initial project experiments and early findings
 
 ---
 
