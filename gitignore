@@ -1,0 +1,56 @@
+# ── Python ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# ── Jupyter ───────────────────────────────────────────────
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# ── Virtual environments ──────────────────────────────────
+venv/
+env/
+.venv/
+.env
+
+# ── IDEs / editors ────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS junk ───────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── MIND dataset (auto-downloaded, not committed) ─────────
+MINDlarge_train/
+MINDlarge_train.zip
+MINDsmall_*/
+MINDlarge_*.zip
+data/MINDlarge_train/
+data/*.zip
+
+# ── Cleaned/derived data files ────────────────────────────
+data/*.parquet
+data/*.csv
+data/*.tsv
+data/*.pkl
+
+# ── spaCy / NLTK downloads ────────────────────────────────
+en_core_web_sm/
+nltk_data/
+
+# ── Logs and caches ───────────────────────────────────────
+*.log
+.coverage
+.pytest_cache/
+.cache/
